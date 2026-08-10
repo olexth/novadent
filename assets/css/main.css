@@ -1,5 +1,5 @@
 @import url("font-awesome.min.css");
-@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600|Cinzel:400,500,600");
 
 /*
 	Prologue by HTML5 UP
@@ -1715,7 +1715,7 @@
 		.image.avatar48 {
 			width: 48px;
 			height: 48px;
-			background: #f00;
+			background: #fff;
 		}
 
 			.image.avatar48 img {
@@ -1727,6 +1727,27 @@
 			display: block;
 			width: 100%;
 		}
+
+		.brand-logo {
+			display: inline-block;
+			margin: 0 auto 1.25em auto;
+			padding: 0.85em 1.4em;
+			background: #fff;
+			font-family: 'Cinzel', 'Times New Roman', serif;
+			font-weight: 500;
+			font-size: 3.4em;
+			letter-spacing: -0.06em;
+			line-height: 1;
+			text-align: center;
+		}
+
+			.brand-logo .brand-nova {
+				color: #848482;
+			}
+
+			.brand-logo .brand-dent {
+				color: #723E3C;
+			}
 
 		.image.featured {
 			display: block;
@@ -2027,26 +2048,25 @@
 	#logo {
 		position: relative;
 		margin: 1.75em 1.5em 1.5em 1.5em;
-		min-height: 48px;
 		cursor: default;
 	}
 
 		#logo h1 {
 			position: relative;
-			color: #fff;
-			font-weight: 600;
-			font-size: 1em;
+			font-family: 'Cinzel', 'Times New Roman', serif;
+			font-weight: 500;
+			font-size: 1.35em;
 			line-height: 1em;
-			letter-spacing: 0.04em;
+			letter-spacing: -0.06em;
 			text-transform: uppercase;
 		}
 
 			#logo h1 .brand-nova {
-				color: #C8C8C8;
+				color: #848482;
 			}
 
 			#logo h1 .brand-dent {
-				color: #DE1C22;
+				color: #723E3C;
 			}
 
 		#logo p {
@@ -2056,12 +2076,6 @@
 			color: rgba(255, 255, 255, 0.5);
 			line-height: 1.25em;
 			margin: 0.5em 0 0 0;
-		}
-
-		#logo .image {
-			position: absolute;
-			left: 0;
-			top: 0;
 		}
 
 	#nav ul li a {
@@ -2279,11 +2293,6 @@
 
 			#header {
 				width: 20%;
-			}
-
-			#logo .image {
-				position: relative;
-				margin: 0 0 0.5em 0;
 			}
 
 			#nav ul li a {
@@ -2541,6 +2550,12 @@
 
 			#main section.cover {
 				padding: 4em 0em;
+			}
+
+			.brand-logo {
+				font-size: 2em;
+				letter-spacing: -0.06em;
+				padding: 0.7em 0.9em;
 			}
 
 				#main section.cover header {
