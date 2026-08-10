@@ -1731,8 +1731,8 @@
 		.brand-logo {
 			display: inline-block;
 			margin: 0 auto 1.25em auto;
-			padding: 0.85em 1.4em;
-			background: #fff;
+			padding: 0;
+			background: transparent;
 			font-family: 'Cinzel', 'Times New Roman', serif;
 			font-weight: 500;
 			font-size: 3.4em;
@@ -1752,7 +1752,7 @@
 			.brand-logo--compact {
 				font-size: 2em;
 				margin: 1.5em auto 0 auto;
-				padding: 0.7em 1.1em;
+				padding: 0;
 			}
 
 		.image.fit.brand-logo-tile {
@@ -2245,15 +2245,34 @@
 					}
 
 			#main > section.cover {
-				padding: 6em 0;
+				padding: 2.5em 0;
 				background-size: cover;
 				background-position: center center;
 			}
 
 			#main > section.one {
-				background-color: #6A6D71;
-				background-image: url("../../images/banner.jpg");
+				background-color: #F2F2F2;
+				background-image: none;
 			}
+
+				#main > section.one .container {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					gap: 1em;
+				}
+
+				#main > section.one .brand-logo,
+				#main > section.one header,
+				#main > section.one footer {
+					margin: 0;
+				}
+
+				#main > section.one h7 {
+					display: block;
+					margin: 0;
+					line-height: 1.25;
+				}
 
 			#main > section.two {
 				background-color: #ffffff;
@@ -2308,7 +2327,7 @@
 			}
 
 			#main section.cover {
-				padding: 5em 0;
+				padding: 2.25em 0;
 			}
 
 	}
@@ -2560,7 +2579,7 @@
 				}
 
 				#main section.cover {
-					padding: 4em 0;
+					padding: 2em 0;
 				}
 
 	}
@@ -2599,13 +2618,13 @@
 			}
 
 			#main section.cover {
-				padding: 4em 0em;
+				padding: 1.75em 0;
 			}
 
 			.brand-logo {
 				font-size: 2em;
 				letter-spacing: -0.06em;
-				padding: 0.7em 0.9em;
+				padding: 0;
 			}
 
 				#main section.cover header {
