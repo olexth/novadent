@@ -1749,6 +1749,34 @@
 				color: #723E3C;
 			}
 
+			.brand-logo--compact {
+				font-size: 2em;
+				margin: 1.5em auto 0 auto;
+				padding: 0.7em 1.1em;
+			}
+
+		.image.fit.brand-logo-tile {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: #fff;
+			min-height: 180px;
+			aspect-ratio: 480 / 286;
+		}
+
+			.image.fit.brand-logo-tile .brand-logo {
+				display: block;
+				width: max-content;
+				max-width: 100%;
+				margin: 0;
+				padding: 0;
+				/* negative letter-spacing shortens the right side of the box */
+				padding-left: 0.06em;
+				box-shadow: none;
+				background: transparent;
+				font-size: clamp(1.1em, 2.4vw, 1.85em);
+			}
+
 		.image.featured {
 			display: block;
 			width: 100%;
