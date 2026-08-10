@@ -1649,7 +1649,7 @@
 	}
 
 		a:hover {
-			color: #E27689;
+			color: #DE1C22;
 			border-bottom-color: rgba(255, 255, 255, 0);
 		}
 
@@ -1822,7 +1822,7 @@
 		form input[type="password"]:focus,
 		form select:focus,
 		form textarea:focus {
-			box-shadow: 0 0 2px 1px #8ebebc;
+			box-shadow: 0 0 2px 1px #DE1C22;
 			background: #fff;
 		}
 
@@ -1884,11 +1884,11 @@
 				text-align: left;
 				padding: 0.5em 1em 0.5em 1em;
 				color: #fff;
-				background: #222729 url("images/overlay.png");
+				background: #2E2C2C url("images/overlay.png");
 			}
 
 			table.default thead {
-				background: #444;
+				background: #6A6D71;
 				color: #fff;
 			}
 
@@ -1909,7 +1909,7 @@
 		color: #fff !important;
 		text-decoration: none;
 		padding: 0.75em 2.5em 0.75em 2.5em;
-		background-color: #8ebebc;
+		background-color: #DE1C22;
 		border: 0;
 		cursor: pointer;
 		background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
@@ -1927,7 +1927,7 @@
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #9ececc;
+			background-color: #F02830;
 		}
 
 		input[type="button"]:active,
@@ -1935,7 +1935,7 @@
 		input[type="reset"]:active,
 		button:active,
 		.button:active {
-			background-color: #7eaeac;
+			background-color: #C0161C;
 		}
 
 /* Item */
@@ -1987,7 +1987,7 @@
 		width: 375px;
 		height: 100%;
 		color: #fff;
-		background: #222629 url("images/overlay.png");
+		background: #2E2C2C url("images/overlay.png");
 		box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.1);
 		text-align: right;
 	}
@@ -2013,7 +2013,7 @@
 		}
 
 			#header .icons a {
-				color: #41484c;
+				color: #9A9A9A;
 				-moz-transition: color 0.35s ease-in-out;
 				-webkit-transition: color 0.35s ease-in-out;
 				-ms-transition: color 0.35s ease-in-out;
@@ -2021,7 +2021,7 @@
 			}
 
 				#header .icons a:hover {
-					color: #fff;
+					color: #DE1C22;
 				}
 
 	#logo {
@@ -2037,7 +2037,17 @@
 			font-weight: 600;
 			font-size: 1em;
 			line-height: 1em;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
 		}
+
+			#logo h1 .brand-nova {
+				color: #C8C8C8;
+			}
+
+			#logo h1 .brand-dent {
+				color: #DE1C22;
+			}
 
 		#logo p {
 			position: relative;
@@ -2076,7 +2086,7 @@
 			#nav ul li a span:before {
 				position: absolute;
 				left: 0;
-				color: #41484c;
+				color: #9A9A9A;
 				text-align: center;
 				width: 1.25em;
 				line-height: 1.75em;
@@ -2089,7 +2099,7 @@
 		}
 
 			#nav ul li a.active span:before {
-				color: #e27689;
+				color: #DE1C22;
 			}
 
 /* Footer */
@@ -2097,11 +2107,21 @@
 	#footer {
 		margin-left: 375px;
 		text-align: center;
-		background-color: #dce3e2;
+		background-color: #6A6D71;
+		color: #fff;
 		padding: 3em 0 4em 0;
 		box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05), inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.025);
 		font-size: 0.8em;
 	}
+
+		#footer a {
+			color: #fff;
+			border-bottom-color: rgba(255, 255, 255, 0.35);
+		}
+
+			#footer a:hover {
+				color: #DE1C22;
+			}
 
 		#footer .copyright {
 			cursor: default;
@@ -2167,20 +2187,20 @@
 			}
 
 			#main > section.one {
-				background-color: #81918E;
+				background-color: #6A6D71;
 				background-image: url("../../images/banner.jpg");
 			}
 
 			#main > section.two {
-				background-color: #f5fafa;
+				background-color: #ffffff;
 			}
 
 			#main > section.three {
-				background-color: #ecf1f1;
+				background-color: #f2f2f2;
 			}
 
 			#main > section.four {
-				background-color: #e8edec;
+				background-color: #ffffff;
 			}
 
 /* Wide */
@@ -2359,7 +2379,7 @@
 				width: 275px;
 				z-index: 10002;
 				width: 275px;
-				background: #222729 url("images/overlay.png");
+				background: #2E2C2C url("images/overlay.png");
 				box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.125);
 			}
 
@@ -2422,7 +2442,7 @@
 						color: #fff;
 						font-size: 18px;
 						line-height: 2.25em;
-						background: rgba(128, 136, 144, 0.5);
+						background: rgba(222, 28, 34, 0.85);
 						border-radius: 0.35em;
 						text-align: center;
 						position: absolute;
