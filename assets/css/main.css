@@ -1760,21 +1760,31 @@
 			align-items: center;
 			justify-content: center;
 			background: #fff;
-			min-height: 180px;
-			aspect-ratio: 480 / 286;
+			min-height: 0;
+			aspect-ratio: 4 / 3;
 		}
 
 			.image.fit.brand-logo-tile .brand-logo {
 				display: block;
 				width: max-content;
-				max-width: 100%;
+				max-width: 90%;
 				margin: 0;
 				padding: 0;
-				/* negative letter-spacing shortens the right side of the box */
 				padding-left: 0.06em;
 				box-shadow: none;
 				background: transparent;
 				font-size: clamp(1.1em, 2.4vw, 1.85em);
+			}
+
+		.gallery .image.fit {
+			aspect-ratio: 4 / 3;
+			overflow: hidden;
+		}
+
+			.gallery .image.fit img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
 			}
 
 		.image.featured {
