@@ -2290,47 +2290,60 @@
 					line-height: 1.25;
 				}
 
-			.promo-banner {
+			.idp-offer {
+				position: relative;
+				z-index: 2;
 				display: block;
 				width: 100%;
-				background: #DE1C22;
-				color: #fff;
-				text-align: center;
-				text-decoration: none;
-				border: 0;
-				padding: 1.6em 1.5em 1.5em 1.5em;
 				margin: 0 0 2em 0;
+				background-color: #DE1C22;
+				background-image: none;
+				color: #fff;
 				box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.12);
-				cursor: pointer;
-				-moz-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
-				-webkit-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
-				-ms-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
-				transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 			}
 
-				.promo-banner:hover,
-				.promo-banner:focus {
+				.idp-offer__link {
+					display: block;
+					width: 100%;
+					padding: 1.6em 1.5em 1.5em 1.5em;
 					color: #fff;
-					background: #c4181e;
+					text-align: center;
+					text-decoration: none;
+					border: 0;
+					background-color: #DE1C22;
+					background-image: none;
+					cursor: pointer;
+					-moz-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+					-webkit-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+					-ms-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+					transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+				}
+
+				.idp-offer__link:hover,
+				.idp-offer__link:focus {
+					color: #fff;
+					background-color: #c4181e;
 					border: 0;
 				}
 
-				.promo-banner__discount {
+				.idp-offer__discount {
 					display: block;
 					font-size: 2.6em;
 					font-weight: 600;
 					line-height: 1.05;
 					letter-spacing: 0.04em;
 					text-transform: uppercase;
+					color: #fff;
 				}
 
-				.promo-banner__text {
+				.idp-offer__text {
 					display: block;
 					margin-top: 0.35em;
 					font-size: 1.35em;
 					font-weight: 400;
 					line-height: 1.3;
 					letter-spacing: 0.02em;
+					color: #fff;
 				}
 
 			#main > section.two {
@@ -2417,11 +2430,11 @@
 				padding-top: 0;
 			}
 
-			.promo-banner__discount {
+			.idp-offer__discount {
 				font-size: 2.3em;
 			}
 
-			.promo-banner__text {
+			.idp-offer__text {
 				font-size: 1.2em;
 			}
 
@@ -2681,16 +2694,19 @@
 					padding-top: 0;
 				}
 
-				.promo-banner {
+				.idp-offer__link {
 					padding: 1.5em 1.25em 1.4em 4.75em;
+				}
+
+				.idp-offer {
 					margin-bottom: 1.5em;
 				}
 
-				.promo-banner__discount {
+				.idp-offer__discount {
 					font-size: 1.9em;
 				}
 
-				.promo-banner__text {
+				.idp-offer__text {
 					font-size: 1.1em;
 				}
 
@@ -2737,16 +2753,19 @@
 				padding-top: 0;
 			}
 
-			.promo-banner {
+			.idp-offer__link {
 				padding: 1.25em 1em 1.2em 4.5em;
+			}
+
+			.idp-offer {
 				margin-bottom: 1.25em;
 			}
 
-			.promo-banner__discount {
+			.idp-offer__discount {
 				font-size: 1.55em;
 			}
 
-			.promo-banner__text {
+			.idp-offer__text {
 				font-size: 0.95em;
 			}
 
