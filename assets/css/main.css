@@ -1609,7 +1609,7 @@
 		font-size: 1.5em;
 	}
 	
-	h7 {
+	#main > section.one header h1 {
 		font-size: 30pt;
 		font-weight: 300;
 		color: #333030;
@@ -2116,7 +2116,7 @@
 		cursor: default;
 	}
 
-		#logo h1 {
+		#logo #title {
 			position: relative;
 			font-family: 'Cinzel', 'Times New Roman', serif;
 			font-weight: 500;
@@ -2126,11 +2126,11 @@
 			text-transform: uppercase;
 		}
 
-			#logo h1 .brand-nova {
+			#logo #title .brand-nova {
 				color: #848482;
 			}
 
-			#logo h1 .brand-dent {
+			#logo #title .brand-dent {
 				color: #723E3C;
 			}
 
@@ -2284,11 +2284,27 @@
 					margin: 0;
 				}
 
-				#main > section.one h7 {
+				#main > section.one header h1 {
 					display: block;
 					margin: 0;
 					line-height: 1.25;
 				}
+
+				#main > section.one footer {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					gap: 0.75em;
+				}
+
+			.service-list h3,
+			.faq h3 {
+				margin: 1.25em 0 0.35em 0;
+			}
+
+			.faq h2 {
+				margin: 1.5em 0 0.5em 0;
+			}
 
 			.idp-offer {
 				position: relative;
