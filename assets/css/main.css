@@ -2302,8 +2302,8 @@
 				margin: 1.25em 0 0.35em 0;
 			}
 
-			.faq h2 {
-				margin: 1.5em 0 0.5em 0;
+			.faq h3:first-child {
+				margin-top: 0;
 			}
 
 			.idp-offer {
@@ -2376,6 +2376,10 @@
 
 			#main > section.five {
 				background-color: #f2f2f2;
+			}
+
+			#main > section.six {
+				background-color: #ffffff;
 			}
 
 			#prices table.default {
