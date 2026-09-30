@@ -2142,6 +2142,31 @@
 			margin: 0.5em 0 0 0;
 		}
 
+		.hero-phones {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			gap: 0.65em 1.75em;
+			margin: 0.35em 0 0.15em 0;
+			text-align: center;
+			line-height: 1.65;
+		}
+
+			.hero-phones a {
+				color: #723E3C;
+				font-size: 1.5em;
+				border-bottom: dotted 1px rgba(114, 62, 60, 0.35);
+			}
+
+				.hero-phones a:hover {
+					color: #DE1C22;
+				}
+
+			.hero-phones__sep {
+				display: none;
+			}
+
 	#nav ul li a {
 		display: block;
 		padding: 0.5em 1.5em 0.5em 1.5em;
