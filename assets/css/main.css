@@ -2155,7 +2155,8 @@
 
 			.hero-phones a {
 				color: #723E3C;
-				font-size: 1.5em;
+				font-size: 30pt;
+				font-weight: 300;
 				border-bottom: dotted 1px rgba(114, 62, 60, 0.35);
 			}
 
