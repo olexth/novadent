@@ -2306,11 +2306,11 @@
 					position: absolute;
 					right: 0;
 					bottom: 0;
-					z-index: 1;
+					z-index: 3;
 					display: block;
-					height: 100%;
+					height: 118%;
 					width: auto;
-					max-width: 46%;
+					max-width: none;
 					pointer-events: none;
 					user-select: none;
 				}
@@ -2833,12 +2833,33 @@
 			}
 
 			#main > section.one .container {
-				padding-right: 42%;
-				padding-bottom: 1.75em;
+				padding-left: 0.9rem;
+				padding-right: 7.25rem;
+				padding-bottom: 1.5em;
 			}
 
 			#main > section.one .hero-doctor {
-				max-width: 48%;
+				height: auto;
+				width: auto;
+				max-height: min(112%, 24rem);
+				max-width: none;
+				right: 0;
+				aspect-ratio: 1086 / 1448;
+				object-fit: contain;
+				transform: translateX(34%);
+			}
+
+			#main > section.one header h1 {
+				font-size: clamp(24px, 8vw, 36px);
+				line-height: 1.25;
+			}
+
+			#main > section.one .hero-phones a {
+				font-size: clamp(18px, 5.5vw, 28px);
+			}
+
+			#main > section.one .button {
+				padding: 0.65em 1.15em;
 			}
 
 			.idp-offer__link {
@@ -2870,6 +2891,10 @@
 
 				#main section.cover header {
 					padding: 0 1em;
+				}
+
+				#main > section.one header {
+					padding: 0;
 				}
 
 		/* Footer */
