@@ -39,7 +39,7 @@ a {
 
 html,
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .page-wrapper,
@@ -165,8 +165,11 @@ body {
 }
 
 .page-header {
-  background: #fff;
+  position: sticky;
+  top: 0;
   z-index: 980;
+  width: 100%;
+  background: #fff;
 }
 
 .page-header__inner {
