@@ -214,6 +214,20 @@ body {
   margin-left: auto;
 }
 
+.header-address {
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.15;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.header-address:hover,
+.header-address:focus {
+  color: var(--accent);
+}
+
 .page-header__phones {
   display: flex;
   flex-direction: column;
