@@ -200,16 +200,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 28px;
+  gap: 16px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.mainmenu li {
+  flex: 0 0 auto;
+}
+
 .mainmenu a {
   color: #000;
-  font-size: 18px;
+  font-size: 14px;
+  line-height: 1.2;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .mainmenu a:hover,
