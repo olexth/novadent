@@ -681,8 +681,21 @@ body {
 
 #offcanvas .uk-offcanvas-header {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
   padding: 28px 28px 10px;
+}
+
+#offcanvas .brand-logo {
+  font-size: 42px;
+}
+
+#offcanvas .brand-logo .brand-nova {
+  color: var(--nova);
+}
+
+#offcanvas .brand-logo .brand-dent {
+  color: var(--dent);
 }
 
 #offcanvas .menu-close {
@@ -810,7 +823,8 @@ body {
 }
 
 @media (max-width: 767px) {
-  .page-header .brand-logo {
+  .page-header .brand-logo,
+  #offcanvas .brand-logo {
     font-size: 32px;
   }
 
