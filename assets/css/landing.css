@@ -508,8 +508,12 @@ body {
   line-height: 1.1;
 }
 
+.adress-list__value a {
+  display: block;
+}
+
 .phone-footer__label,
-.adress-list__value span + span {
+.adress-list__value > span {
   display: block;
   margin-top: 4px;
   color: #cfcfcf;
