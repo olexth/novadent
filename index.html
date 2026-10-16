@@ -17,8 +17,9 @@
 		<link rel="apple-touch-icon" href="images/apple-touch-icon.png?v=2">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Cinzel:500&display=swap">
-		<link rel="stylesheet" href="assets/css/main.css?v=15" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Cinzel:wght@500&display=swap">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.6/dist/css/uikit.min.css" />
+		<link rel="stylesheet" href="assets/css/landing.css?v=6" />
 		<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
@@ -63,336 +64,393 @@
 					"opens": "09:00",
 					"closes": "15:00"
 				}
-			],
-			"hasOfferCatalog": {
-				"@type": "OfferCatalog",
-				"name": "Стоматологічні послуги",
-				"itemListElement": [
-					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Консультація" } },
-					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Терапія" } },
-					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Протезування" } },
-					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Рентген / візіограф" } }
-				]
-			}
+			]
 		}
 		</script>
 	</head>
-	<body>
-
-		<!-- Header -->
-			<div id="header">
-
-				<div class="top">
-
-					<!-- Logo -->
-						<div id="logo">
-							<div id="title"><span class="brand-nova">NOVA</span><span class="brand-dent">DENT</span></div>
-							<p>Стоматологічний кабінет</p>
-							<p>Вінниця, Україна</p>
+	<body class="page-home">
+		<div class="page-wrapper">
+			<header class="page-header" uk-sticky>
+				<div class="uk-container uk-container-xlarge">
+					<div class="page-header__inner">
+						<div class="page-header__logo">
+							<a class="brand-logo" href="#top" aria-label="Novadent"><span class="brand-nova">NOVA</span><span class="brand-dent">DENT</span></a>
 						</div>
-
-					<!-- Nav -->
-						<nav id="nav">
-							<!--
-
-								Prologue's nav expects links in one of two formats:
-
-								1. Hash link (scrolls to a different section within the page)
-
-								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
-
-								2. Standard link (sends the user to another page/site)
-
-								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
-
-							-->
-							<ul>
-								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Домашня сторінка</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Про нас</span></a></li>
-								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Послуги</span></a></li>
-								<li><a href="#faq" id="faq-link" class="skel-layers-ignoreHref"><span class="icon fa-question">Часті запитання</span></a></li>
-								<li><a href="#prices" id="prices-link" class="skel-layers-ignoreHref"><span class="icon fa-list-alt">Ціни</span></a></li>
-								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Контакти</span></a></li>
+						<div class="page-header__scroll-menu">
+							<ul class="mainmenu">
+								<li><a href="#about">Про нас</a></li>
+								<li><a href="#services">Послуги</a></li>
+								<li><a href="#faq">Часті запитання</a></li>
+								<li><a href="#prices">Ціни</a></li>
+								<li><a href="#contact">Контакти</a></li>
 							</ul>
-						</nav>
-
-				</div>
-
-				<div class="bottom">
-
-				<!--		<ul class="icons">
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
-						</ul> -->
-
-				</div> 
-
-			</div>
-
-		<!-- Main -->
-			<div id="main">
-
-				<!-- Intro -->
-					<section id="top" class="one cover">
-						<!-- Temporary IDP discount: remove this block and .idp-offer CSS when the offer ends. -->
-						<div class="idp-offer">
-							<a class="idp-offer__link" href="tel:+380751777567" aria-label="Зателефонувати: 075 177 75 67">
-								<span class="idp-offer__discount">до 15%</span>
-								<span class="idp-offer__text">знижка внутрішньо переміщеним особам</span>
-							</a>
 						</div>
+						<div class="page-header__right">
+							<div class="page-header__phones">
+								<a class="phone phone--desktop" href="tel:+380751777567">075 177 75 67</a>
+								<a class="phone phone--desktop" href="tel:+380951877887">095 187 78 87</a>
+								<a class="phone phone--mobile" href="tel:+380751777567" aria-label="Зателефонувати: 075 177 75 67">
+									<svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3.5h2.2l1.2 3-1.6 1a12.5 12.5 0 0 0 6.7 6.7l1-1.6 3 1.2V18a1.5 1.5 0 0 1-1.6 1.5A15.5 15.5 0 0 1 4.5 5.1 1.5 1.5 0 0 1 6 3.5H7Z" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/></svg>
+								</a>
+							</div>
+							<div class="page-header__menu">
+								<a class="icon-button" href="#offcanvas" uk-toggle aria-label="Меню">
+									<svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M6 9h20M6 16h20M6 23h20" stroke="#111" stroke-width="1.8" stroke-linecap="round"/></svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
 
-						<div class="hero-body">
-							<div class="container">
-
-								<div class="brand-logo" aria-label="Novadent"><span class="brand-nova">NOVA</span><span class="brand-dent">DENT</span></div>
-
-								<header>
-								<!--	<h2 class="alt">Мы рады приветствовать Вас на сайте стоматологического кабинета <strong>«Novadent»</strong> -->
-								<h1>Ми раді вітати Вас на сайті стоматологічної клініки доктора Голуба</h1>
-								</header>
-
+			<main class="page-main" id="top">
+				<section class="hero">
+					<div class="uk-container uk-container-xlarge">
+						<div class="uk-grid uk-child-width-1-2@l" uk-grid>
+							<div>
+								<h1 class="uk-h1 hero__title">Ми раді вітати Вас на сайті стоматологічної клініки доктора Голуба</h1>
+							</div>
+							<div>
 								<p class="hero-phones">
 									<a href="tel:+380751777567">075 177 75 67</a>
-									<span class="hero-phones__sep"> · </span>
 									<a href="tel:+380951877887">095 187 78 87</a>
 								</p>
-
-								<footer>
-									<a href="#portfolio" class="button scrolly">Дізнайтесь більше!</a>
-								</footer>
-
+								<p class="placeholder">Текст секції</p>
 							</div>
-
-							<img class="hero-doctor" src="images/doctor.png" alt="Лікар-стоматолог вищої категорії Голуб Олександр Олексійович" width="1086" height="1448">
-						</div>
-					</section>
-
-				<!-- About Us -->
-					<section id="portfolio" class="two">
-						<div class="container">
-
-							<header>
-								<h2>Про нас</h2>
-							</header>
-
-							<p>Наш кабінет надає стоматологічну допомогу пацієнтам Вінниці, всієї України, ближнього та далекого зарубіжжя. Завжди до Ваших послуг лікування та протезування у м.Вінниця. Лікування та протезування зубів проводиться сучасними методами з огляду на матеріальні можливості пацієнтів. Ми пропонуємо широкий вибір реставраційних матеріалів як вітчизняного виробництва, так і імпортних виробників (Україна, Німеччина, США, Японія), тим самим даємо можливість вибору не лише з урахуванням показань, але й з урахуванням ціни лікування та протезування. Консультація та складання плану лікування безкоштовні. Запис — за телефоном <a href="tel:+380751777567">075 177 75 67</a>.</p>
-
-							<p>Прийом веде лікар вищої категорії <strong>Голуб Олександр Олексійович</strong>, стаж роботи більше 40 років.</p>
-
-							<div class="row gallery">
-								<div class="4u 12u$(mobile)">
-									<article class="item">
-										<a class="image fit"><img src="images/top-1-left.jpg" alt="Рецепція стоматологічного кабінету Novadent, вул. Гоголя 15, Вінниця" width="1024" height="768" loading="lazy" /></a>
-									</article>
-									<article class="item">
-										<a class="image fit"><img src="images/top-2-left.jpg" alt="Вхід до стоматологічного кабінету Novadent на вул. Гоголя 15 у Вінниці" width="1024" height="768" loading="lazy" /></a>
-									</article>
-								</div>
-								<div class="4u 12u$(mobile)">
-									<article class="item">
-										<div class="image fit brand-logo-tile">
-											<div class="brand-logo brand-logo--compact" aria-label="Novadent"><span class="brand-nova">NOVA</span><span class="brand-dent">DENT</span></div>
-										</div>
-									</article>
-									<article class="item">
-										<a class="image fit"><img src="images/top-2-center.jpg" alt="Зал очікування стоматологічного кабінету Novadent у Вінниці" width="1024" height="768" loading="lazy" /></a>
-									</article>
-								</div>
-								<div class="4u$ 12u$(mobile)">
-									<article class="item">
-										<a class="image fit"><img src="images/top-1-right.jpg" alt="Графік роботи Novadent на табличці біля входу, вул. Гоголя 15, Вінниця" width="1024" height="768" loading="lazy" /></a>
-									</article>
-									<article class="item">
-										<a class="image fit"><img src="images/top-2-right.jpg" alt="Лікувальний кабінет Novadent у Вінниці" width="1024" height="768" loading="lazy" /></a>
-									</article>
+							<div class="uk-width-1-1">
+								<div class="hero-media">
+									<img src="https://dent-art.com.ua/assets/img/img_hero-home.jpg" alt="">
 								</div>
 							</div>
-
 						</div>
+					</div>
+				</section>
 
-					</section>
-
-				<!-- Services -->
-					<section id="about" class="three">
-						<div class="container">
-
-							<header>
-								<h2>Послуги</h2>
-							</header>
-
-							<p>Завдяки найширшому асортименту стоматологічних матеріалів Ви завжди зможете знайти оптимальне вирішення проблеми у всіх цінових категоріях. Знеболення проводиться із застосуванням сучасних препаратів, які враховують загальний стан організму. Методи стерилізації, що застосовуються, забезпечують вимоги всіх санітарних норм. Для обробки інструменту застосовуються сучасні методи стерилізації та автоклавування в одноразових пакетах. Рентгендіагностика проводиться за допомогою сучасного візіографа.</p>
-
-							<div class="row gallery">
-								<div class="4u 12u$(mobile)">
-									<article class="item">
-										<a class="image fit"><img src="images/bottom-left.jpg" alt="Портативний рентген у стоматологічному кабінеті Novadent" width="1024" height="768" loading="lazy" /></a>
-									</article>
+				<section class="philosophy" id="about">
+					<div class="uk-container uk-container-xlarge">
+						<div class="philosophy__wrapper">
+							<div class="uk-grid uk-grid-collapse uk-flex-bottom uk-child-width-1-2@l" uk-grid>
+								<div class="uk-flex-last@l">
+									<div class="philosophy__content">
+										<h2 class="uk-h1">Про нас</h2>
+										<p class="placeholder">Текст секції</p>
+									</div>
 								</div>
-								<div class="4u 12u$(mobile)">
-									<article class="item">
-										<a class="image fit"><img src="images/bottom-center.jpg" alt="Лікар вищої категорії Голуб Олександр Олексійович, стоматологічний кабінет Novadent" width="1280" height="960" loading="lazy" /></a>
-									</article>
-								</div>
-								<div class="4u$ 12u$(mobile)">
-									<article class="item">
-										<a class="image fit"><img src="images/bottom-right.jpg" alt="Стоматологічне обладнання кабінету Novadent у Вінниці" width="1024" height="768" loading="lazy" /></a>
-									</article>
+								<div>
+									<div class="philosophy__media media-frame">
+										<img src="https://dent-art.com.ua/assets/img/img_philosophy.jpg" alt="">
+									</div>
 								</div>
 							</div>
+						</div>
+					</div>
+				</section>
 
-
-							<div class="service-list">
-								<h3>Консультація</h3>
-								<p>Консультація та складання плану лікування безкоштовні. Запис за телефоном <a href="tel:+380751777567">075 177 75 67</a>.</p>
-
-								<h3>Терапія</h3>
-								<p>Знеболювання, ультразвукова гігієна порожнини рота, пломбування і реставрація зубів сучасними фотокомпозитними матеріалами.</p>
-
-								<h3>Протезування</h3>
-								<p>Коронки (лита, металокераміка, безметалева прес-кераміка, цирконій), вкладки, знімні та бюгельні протези.</p>
-
-								<h3>Рентген / візіограф</h3>
-								<p>Рентгенодіагностика на місці, зокрема портативний рентген.</p>
+				<section class="care">
+					<div class="uk-container uk-container-xlarge">
+						<div class="uk-grid uk-grid-collapse uk-child-width-1-2@l" uk-grid>
+							<div>
+								<div class="care__content">
+									<p class="placeholder">Текст секції</p>
+									<a class="uk-button" href="tel:+380751777567">075 177 75 67</a>
+								</div>
 							</div>
-
-								   <div class="brand-logo brand-logo--compact" aria-label="Novadent"><span class="brand-nova">NOVA</span><span class="brand-dent">DENT</span></div>
-
-						</div>
-					</section>
-
-				<!-- FAQ -->
-					<section id="faq" class="four">
-						<div class="container">
-
-							<header>
-								<h2>Часті запитання</h2>
-							</header>
-
-							<div class="faq">
-								<h3>Чи потрібен запис?</h3>
-								<p>Так. Записатися можна за телефоном <a href="tel:+380751777567">075 177 75 67</a>.</p>
-								<h3>Чи є рентген на місці?</h3>
-								<p>Так. У кабінеті є візіограф і портативний рентген, рентгенографія коштує 100 грн.</p>
-								<h3>Чи безкоштовна консультація?</h3>
-								<p>Так. Консультація та складання плану лікування безкоштовні.</p>
-								<h3>Який графік роботи?</h3>
-								<p>Понеділок–п’ятниця 9:00–18:00, субота 9:00–15:00, неділя — вихідний. Кабінет на вул. Гоголя 15, Вінниця.</p>
+							<div>
+								<div class="care__media media-frame">
+									<img src="https://dent-art.com.ua/assets/img/img_care.jpg" alt="">
+								</div>
 							</div>
-
 						</div>
-					</section>
+					</div>
+				</section>
 
-				<!-- Prices -->
-					<section id="prices" class="five">
-						<div class="container">
-
-							<header>
-								<h2>Ціни</h2>
-							</header>
-
-							<p>Внутрішньо переміщеним особам — знижка до 15%.</p>
-
-							<table class="default">
-								<thead>
-									<tr>
-										<th>№</th>
-										<th>Послуга</th>
-										<th>Ціна</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr><td>1</td><td>Зняття назубних відкладень</td><td>800 грн</td></tr>
-									<tr><td>2</td><td>Фотополімер Лателюкс</td><td>800 грн</td></tr>
-									<tr><td>3</td><td>Фотополімер Карісма</td><td>1200 грн</td></tr>
-									<tr><td>4</td><td>Фотополімер Градія</td><td>1400 грн</td></tr>
-									<tr><td>5</td><td>Нанокомпозит (CeramX)</td><td>1400 грн</td></tr>
-									<tr><td>6</td><td>Титанові штифти</td><td>400 грн</td></tr>
-									<tr><td>7</td><td>Фісурит</td><td>300 грн</td></tr>
-									<tr><td>8</td><td>Анестезія</td><td>200 грн</td></tr>
-									<tr><td>9</td><td>Рентгенографія</td><td>100 грн</td></tr>
-									<tr><td>10</td><td>Пульпіт (1 канал)</td><td>1500 грн</td></tr>
-									<tr><td>11</td><td>Пульпіт (2 канали)</td><td>2000 грн</td></tr>
-									<tr><td>12</td><td>Пульпіт (3 канали)</td><td>2500 грн</td></tr>
-									<tr><td>13</td><td>Лита коронка</td><td>3000 грн</td></tr>
-									<tr><td>14</td><td>Металокераміка</td><td>4000 грн</td></tr>
-									<tr><td>15</td><td>Безметалева прес-кераміка</td><td>6000 грн</td></tr>
-									<tr><td>16</td><td>Цирконій</td><td>8000 грн</td></tr>
-									<tr><td>17</td><td>Вкладка</td><td>1000 грн</td></tr>
-									<tr><td>18</td><td>Знімний протез (акрил)</td><td>5000 грн</td></tr>
-									<tr><td>19</td><td>Знімний протез (нейлон)</td><td>8000 грн</td></tr>
-									<tr><td>20</td><td>Бюгельний протез ацетал</td><td>12000 грн</td></tr>
-									<tr><td>21</td><td>Бюгельний протез — база метал, нейлон, пілоти</td><td>від 15000 грн</td></tr>
-									<tr><td>22</td><td>Цементування фосфатним цементом</td><td>200 грн</td></tr>
-									<tr><td>23</td><td>Цементування Ketac Cem</td><td>300 грн</td></tr>
-									<tr><td>24</td><td>Цементування Fuji</td><td>400 грн</td></tr>
-								</tbody>
-							</table>
-
-							<div class="brand-logo brand-logo--compact" aria-label="Novadent"><span class="brand-nova">NOVA</span><span class="brand-dent">DENT</span></div>
-
-						</div>
-					</section>
-
-				<!-- Contact -->
-					<section id="contact" class="six">
-						<div class="container">
-
-							<header>
-								<h2>Контакти</h2>
-							</header>
-
-							<div class="contact-map">
-								<iframe
-									title="Novadent на карті — Вінниця, Гоголя 15"
-									src="https://maps.google.com/maps?q=%D0%92%D1%96%D0%BD%D0%BD%D0%B8%D1%86%D1%8F%2C+%D0%93%D0%BE%D0%B3%D0%BE%D0%BB%D1%8F+15&hl=uk&z=16&ie=UTF8&output=embed"
-									loading="lazy"
-									referrerpolicy="no-referrer-when-downgrade"
-									allowfullscreen></iframe>
+				<section class="team">
+					<div class="uk-container uk-container-xlarge">
+						<div class="team__wrapper">
+							<div class="team-photo">
+								<img src="https://dent-art.com.ua/assets/img/img_team.jpg" alt="">
 							</div>
-							<p class="contact-actions">
-								<a class="button" href="https://www.google.com/maps/dir/?api=1&destination=%D0%92%D1%96%D0%BD%D0%BD%D0%B8%D1%86%D1%8F%2C+%D0%B2%D1%83%D0%BB.+%D0%93%D0%BE%D0%B3%D0%BE%D0%BB%D1%8F%2C+15" target="_blank" rel="noopener noreferrer">Прокласти маршрут</a>
-							</p>
-
-							<p>
-							<b>Адреса:</b><br>
-							<b><a href="https://www.google.com/maps/search/?api=1&query=%D0%92%D1%96%D0%BD%D0%BD%D0%B8%D1%86%D1%8F%2C+%D0%B2%D1%83%D0%BB.+%D0%93%D0%BE%D0%B3%D0%BE%D0%BB%D1%8F%2C+15" target="_blank" rel="noopener noreferrer">Вінниця, Вінницька область, вул. Гоголя 15</a></b><br>
-							<strong>телефон: <a href="tel:+380751777567">075 177 75 67</a></strong><br>
-							<strong><a href="tel:+380951877887">095 187 78 87</a></strong><br>
-                            </p>
-                             
-                            <strong>Графік роботи:</strong><br>
-                                   Пн-пт : 9.00 - 18.00<br>
-                                   Сб : 9.00 - 15.00<br>
-                                   Нд : вихідний<br><br>
-                                   
-								   <div class="brand-logo brand-logo--compact" aria-label="Novadent"><span class="brand-nova">NOVA</span><span class="brand-dent">DENT</span></div>
-
 						</div>
-					</section>
+					</div>
+				</section>
 
-			</div>
+				<section class="reviews">
+					<div class="uk-container uk-container-xlarge">
+						<div class="reviews-row">
+							<article class="review-card"><div class="review-card__box"><img src="https://dent-art.com.ua/templates/images/reviews/0495db4c4e45408d759d8f87916383ad_1744639658.jpg" alt=""></div></article>
+							<article class="review-card"><div class="review-card__box"><img src="https://dent-art.com.ua/templates/images/reviews/70cbbc73bbe52eb57522f19dded42ec3_1744639780.jpg" alt=""></div></article>
+							<article class="review-card"><div class="review-card__box"><img src="https://dent-art.com.ua/templates/images/reviews/40f834b678478c20b4212d4525c070df_1744639559.jpg" alt=""></div></article>
+							<article class="review-card"><div class="review-card__box"><img src="https://dent-art.com.ua/templates/images/reviews/58bea255b1c90915a2055b390af7bc97_1744639599.jpg" alt=""></div></article>
+							<article class="review-card"><div class="review-card__box"><img src="https://dent-art.com.ua/templates/images/reviews/1557a0072fabc4fa7f1c6d13a11bcc3f_1744639731.jpg" alt=""></div></article>
+						</div>
+					</div>
+				</section>
 
-		<!-- Footer -->
-			<div id="footer">
+				<section class="consultation">
+					<div class="uk-container uk-container-xlarge">
+						<div class="uk-grid uk-grid-collapse uk-child-width-1-2@l" uk-grid>
+							<div>
+								<div class="consultation__content">
+									<p class="placeholder">Текст секції</p>
+									<a class="uk-button" href="#contact">Контакти</a>
+								</div>
+							</div>
+							<div>
+								<div class="consultation__media media-frame">
+									<img src="https://dent-art.com.ua/assets/img/img_consultation.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; Novadent. Права захищені 2026</li><li>Дизайн: <a href="https://www.linkedin.com/in/olex-golub-a822b546/">Olex Golub</a></li>
+				<section class="steps-service" id="services">
+					<div class="uk-container uk-container-xlarge">
+						<h2 class="uk-h1">Послуги</h2>
+						<p class="placeholder">Текст секції</p>
+						<div class="uk-grid uk-child-width-1-2@m" uk-grid>
+							<div>
+								<div class="steps-item">
+									<div class="steps-item__numb"><span>1</span></div>
+									<h3 class="steps-item__title">Консультація</h3>
+									<p class="placeholder">Текст секції</p>
+								</div>
+							</div>
+							<div>
+								<div class="steps-item">
+									<div class="steps-item__numb"><span>2</span></div>
+									<h3 class="steps-item__title">Терапія</h3>
+									<p class="placeholder">Текст секції</p>
+								</div>
+							</div>
+							<div>
+								<div class="steps-item">
+									<div class="steps-item__numb"><span>3</span></div>
+									<h3 class="steps-item__title">Протезування</h3>
+									<p class="placeholder">Текст секції</p>
+								</div>
+							</div>
+							<div>
+								<div class="steps-item">
+									<div class="steps-item__numb"><span>4</span></div>
+									<h3 class="steps-item__title">Рентген / візіограф</h3>
+									<p class="placeholder">Текст секції</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="type-service">
+					<div class="uk-container uk-container-xlarge">
+						<div class="type-service-box">
+							<div class="uk-grid uk-child-width-1-2@m uk-flex-middle" uk-grid>
+								<div>
+									<h3>Консультація</h3>
+									<p class="placeholder">Текст секції</p>
+								</div>
+								<div><img src="https://dent-art.com.ua/upload-files/main_seo1.jpg" alt=""></div>
+							</div>
+						</div>
+						<div class="type-service-box">
+							<div class="uk-grid uk-child-width-1-2@m uk-flex-middle" uk-grid>
+								<div>
+									<h3>Терапія</h3>
+									<p class="placeholder">Текст секції</p>
+								</div>
+								<div><img src="https://dent-art.com.ua/upload-files/main_seo2.jpg" alt=""></div>
+							</div>
+						</div>
+						<div class="type-service-box">
+							<div class="uk-grid uk-child-width-1-2@m uk-flex-middle" uk-grid>
+								<div>
+									<h3>Протезування</h3>
+									<p class="placeholder">Текст секції</p>
+								</div>
+								<div><img src="https://dent-art.com.ua/upload-files/main_seo3.jpg" alt=""></div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="faq-section" id="faq">
+					<div class="uk-container uk-container-xlarge">
+						<h2 class="uk-h1">Часті запитання</h2>
+						<ul class="accordion-block" uk-accordion>
+							<li>
+								<a class="uk-accordion-title" href="#">Чи потрібен запис?</a>
+								<div class="uk-accordion-content"><p class="placeholder">Текст секції</p></div>
+							</li>
+							<li>
+								<a class="uk-accordion-title" href="#">Чи є рентген на місці?</a>
+								<div class="uk-accordion-content"><p class="placeholder">Текст секції</p></div>
+							</li>
+							<li>
+								<a class="uk-accordion-title" href="#">Чи безкоштовна консультація?</a>
+								<div class="uk-accordion-content"><p class="placeholder">Текст секції</p></div>
+							</li>
+							<li>
+								<a class="uk-accordion-title" href="#">Який графік роботи?</a>
+								<div class="uk-accordion-content"><p class="placeholder">Текст секції</p></div>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="prices-section" id="prices">
+					<div class="uk-container uk-container-xlarge">
+						<h2 class="uk-h1">Ціни</h2>
+						<ul class="accordion-block" uk-accordion>
+							<li class="uk-open">
+								<a class="uk-accordion-title" href="#">Ціни</a>
+								<div class="uk-accordion-content">
+									<ul class="prices-list">
+										<li><span>Зняття назубних відкладень</span><strong>800 грн</strong></li>
+										<li><span>Фотополімер Лателюкс</span><strong>800 грн</strong></li>
+										<li><span>Фотополімер Карісма</span><strong>1200 грн</strong></li>
+										<li><span>Фотополімер Градія</span><strong>1400 грн</strong></li>
+										<li><span>Нанокомпозит (CeramX)</span><strong>1400 грн</strong></li>
+										<li><span>Титанові штифти</span><strong>400 грн</strong></li>
+										<li><span>Фісурит</span><strong>300 грн</strong></li>
+										<li><span>Анестезія</span><strong>200 грн</strong></li>
+										<li><span>Рентгенографія</span><strong>100 грн</strong></li>
+										<li><span>Пульпіт (1 канал)</span><strong>1500 грн</strong></li>
+										<li><span>Пульпіт (2 канали)</span><strong>2000 грн</strong></li>
+										<li><span>Пульпіт (3 канали)</span><strong>2500 грн</strong></li>
+										<li><span>Лита коронка</span><strong>3000 грн</strong></li>
+										<li><span>Металокераміка</span><strong>4000 грн</strong></li>
+										<li><span>Безметалева прес-кераміка</span><strong>6000 грн</strong></li>
+										<li><span>Цирконій</span><strong>8000 грн</strong></li>
+										<li><span>Вкладка</span><strong>1000 грн</strong></li>
+										<li><span>Знімний протез (акрил)</span><strong>5000 грн</strong></li>
+										<li><span>Знімний протез (нейлон)</span><strong>8000 грн</strong></li>
+										<li><span>Бюгельний протез ацетал</span><strong>12000 грн</strong></li>
+										<li><span>Бюгельний протез — база метал, нейлон, пілоти</span><strong>від 15000 грн</strong></li>
+										<li><span>Цементування фосфатним цементом</span><strong>200 грн</strong></li>
+										<li><span>Цементування Ketac Cem</span><strong>300 грн</strong></li>
+										<li><span>Цементування Fuji</span><strong>400 грн</strong></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="contact-section" id="contact">
+					<div class="uk-container uk-container-xlarge">
+						<h2 class="uk-h1">Контакти</h2>
+						<div class="uk-grid uk-child-width-1-2@m" uk-grid>
+							<div>
+								<p class="contact-facts">
+									<strong>Адреса:</strong><br>
+									<a href="https://www.google.com/maps/search/?api=1&query=%D0%92%D1%96%D0%BD%D0%BD%D0%B8%D1%86%D1%8F%2C+%D0%B2%D1%83%D0%BB.+%D0%93%D0%BE%D0%B3%D0%BE%D0%BB%D1%8F%2C+15" target="_blank" rel="noopener noreferrer">Вінниця, вул. Гоголя 15</a><br>
+									<a href="tel:+380751777567">075 177 75 67</a><br>
+									<a href="tel:+380951877887">095 187 78 87</a>
+								</p>
+								<p class="contact-facts">
+									<strong>Графік роботи:</strong><br>
+									Пн-пт: 9.00–18.00<br>
+									Сб: 9.00–15.00<br>
+									Нд: вихідний
+								</p>
+								<p><a class="uk-button" href="https://www.google.com/maps/dir/?api=1&destination=%D0%92%D1%96%D0%BD%D0%BD%D0%B8%D1%86%D1%8F%2C+%D0%B2%D1%83%D0%BB.+%D0%93%D0%BE%D0%B3%D0%BE%D0%BB%D1%8F%2C+15" target="_blank" rel="noopener noreferrer">Прокласти маршрут</a></p>
+							</div>
+							<div>
+								<div class="contact-map">
+									<iframe title="Novadent на карті — Вінниця, Гоголя 15" src="https://maps.google.com/maps?q=%D0%92%D1%96%D0%BD%D0%BD%D0%B8%D1%86%D1%8F%2C+%D0%93%D0%BE%D0%B3%D0%BE%D0%BB%D1%8F+15&hl=uk&z=16&ie=UTF8&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<footer class="page-footer">
+				<div class="uk-container uk-container-xlarge">
+					<div class="page-footer__wrapper">
+						<div class="page-footer__top">
+							<div class="page-footer__inner">
+								<div class="page-footer__logo">
+									<a class="brand-logo brand-logo--footer" href="#top" aria-label="Novadent"><span class="brand-nova">NOVA</span><span class="brand-dent">DENT</span></a>
+								</div>
+								<div class="page-footer__contacts">
+									<a class="phone-footer" href="tel:+380751777567">
+										<span class="phone-footer__number">075 177 75 67</span>
+									</a>
+									<a class="phone-footer" href="tel:+380951877887">
+										<span class="phone-footer__number">095 187 78 87</span>
+									</a>
+								</div>
+								<div class="page-footer__adress">
+									<div class="footer-title">Контакти</div>
+									<ul class="adress-list">
+										<li class="adress-list__item">
+											<div class="adress-list__value">
+												<a href="#contact"><span>вул. Гоголя 15</span></a>
+												<span>Пн-пт: 9:00–18:00</span>
+												<span>Сб: 9:00–15:00</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="page-footer__menu">
+									<div class="footer-title">Пацієнтам</div>
+									<ul class="footer-menu">
+										<li><a href="#about">Про нас</a></li>
+										<li><a href="#faq">Часті запитання</a></li>
+										<li><a href="#prices">Ціни</a></li>
+										<li><a href="#contact">Контакти</a></li>
+									</ul>
+								</div>
+								<div class="page-footer__menu">
+									<div class="footer-title">Послуги</div>
+									<ul class="footer-menu">
+										<li><a href="#services">Консультація</a></li>
+										<li><a href="#services">Терапія</a></li>
+										<li><a href="#services">Протезування</a></li>
+										<li><a href="#services">Рентген / візіограф</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="page-footer__bottom">
+							<ul class="footer-links">
+								<li><span>© Novadent. Права захищені 2026</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<a class="button-to-top" href="#top" uk-scroll aria-label="Вгору">
+					<svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 11.5 9 6.5l5 5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+				</a>
+			</footer>
+
+			<div id="offcanvas" uk-offcanvas="overlay: true; flip: true; mode: slide">
+				<div class="uk-offcanvas-bar uk-flex uk-flex-column">
+					<button class="uk-offcanvas-close" type="button" uk-close></button>
+					<ul class="uk-nav uk-nav-default" uk-nav>
+						<li><a href="#about">Про нас</a></li>
+						<li><a href="#services">Послуги</a></li>
+						<li><a href="#faq">Часті запитання</a></li>
+						<li><a href="#prices">Ціни</a></li>
+						<li><a href="#contact">Контакти</a></li>
 					</ul>
-
+					<div class="offcanvas-phones">
+						<a href="tel:+380751777567">075 177 75 67</a>
+						<a href="tel:+380951877887">095 187 78 87</a>
+					</div>
+				</div>
 			</div>
+		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollzer.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<div class="page-footer-buttons">
+			<a class="page-footer-button" href="tel:+380751777567">
+				<svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M6.4 3.2h2l1.1 2.8-1.5.9a11.4 11.4 0 0 0 6.1 6.1l.9-1.5 2.8 1.1v2a1.4 1.4 0 0 1-1.5 1.4A14.2 14.2 0 0 1 4.9 4.7a1.4 1.4 0 0 1 1.5-1.5Z" stroke="#333" stroke-width="1.6" stroke-linejoin="round"/></svg>
+				<span>075 177 75 67</span>
+			</a>
+		</div>
 
+		<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.6/dist/js/uikit.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.6/dist/js/uikit-icons.min.js"></script>
 	</body>
 </html>
