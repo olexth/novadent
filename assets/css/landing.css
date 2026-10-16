@@ -520,7 +520,7 @@ body {
   display: block;
   margin-top: 4px;
   color: #cfcfcf;
-  font-size: 14px;
+  font-size: inherit;
 }
 
 .footer-title {
