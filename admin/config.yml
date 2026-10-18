@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+app_title: Novadent — блог
+site_url: https://novadent.vn.ua
+display_url: https://novadent.vn.ua/blog/
+# Кнопку «Увійти через GitHub» вмикає безкоштовний Sveltia CMS Authenticator.
+# Після його встановлення розкоментуйте рядок і вкажіть адресу воркера:
+# base_url: https://novadent-auth.example.workers.dev
+
+backend:
+  name: github
+  repo: olexth/novadent
+  branch: main
+
+media_folder: images/blog
+public_folder: /images/blog
+
+collections:
+  - name: posts
+    label: Пости
+    label_singular: Пост
+    folder: blog/posts
+    create: true
+    delete: true
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}{{minute}}{{second}}"
+    preview_path: /blog/articles/{{slug}}.html
+    fields:
+      - { label: Заголовок, name: title, widget: string }
+      - { label: Дата, name: date, widget: datetime }
+      - { label: Зображення, name: image, widget: image, required: false }
+      - { label: Текст, name: body, widget: richtext }
