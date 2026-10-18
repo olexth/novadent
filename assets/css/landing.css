@@ -624,6 +624,14 @@ body {
   flex: 0 0 180px;
 }
 
+.page-footer__contacts {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
 .phone-footer {
   display: block;
   color: #fff;
@@ -632,9 +640,28 @@ body {
 
 .phone-footer__number {
   display: block;
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 600;
   line-height: 1.1;
+  white-space: nowrap;
+}
+
+.footer-instagram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin-top: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  color: #fff;
+}
+
+.footer-instagram:hover,
+.footer-instagram:focus {
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 .adress-list__value a {
