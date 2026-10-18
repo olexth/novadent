@@ -1,0 +1,35 @@
+name: Publish blog
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "blog/posts/**"
+      - "scripts/build_blog.py"
+      - ".github/workflows/blog.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install markdown
+      - run: python3 scripts/build_blog.py
+      - name: Commit generated pages
+        run: |
+          git config user.name "Novadent blog"
+          git config user.email "blog@novadent.vn.ua"
+          git add blog/index.html blog/articles
+          if git diff --staged --quiet; then
+            echo "Blog pages are already up to date."
+          else
+            git commit -m "Publish blog pages"
+            git push
+          fi
