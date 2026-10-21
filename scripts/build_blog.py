@@ -35,16 +35,16 @@ SHELL = """<!DOCTYPE html>
 				<div class="uk-container uk-container-xlarge">
 					<div class="page-header__inner">
 						<div class="page-header__logo">
-							<a class="brand-logo" href="{root}" aria-label="Novadent"><span class="brand-nova">NOVA</span><span class="brand-dent">DENT</span></a>
+							<a class="brand-logo" href="{root}index.html" aria-label="Novadent"><span class="brand-nova">NOVA</span><span class="brand-dent">DENT</span></a>
 						</div>
 						<div class="page-header__scroll-menu">
 							<ul class="mainmenu">
-								<li><a href="{root}#about">Про нас</a></li>
-								<li><a href="{root}#services">Послуги</a></li>
-								<li><a href="{root}#faq">Часті запитання</a></li>
+								<li><a href="{root}index.html#about">Про нас</a></li>
+								<li><a href="{root}index.html#services">Послуги</a></li>
+								<li><a href="{root}index.html#faq">Часті запитання</a></li>
 								<li><a href="{root}blog/index.html">Блог</a></li>
-								<li><a href="{root}#prices">Ціни</a></li>
-								<li><a href="{root}#contact">Контакти</a></li>
+								<li><a href="{root}index.html#prices">Ціни</a></li>
+								<li><a href="#contact">Контакти</a></li>
 							</ul>
 						</div>
 						<div class="page-header__right">
@@ -72,6 +72,28 @@ SHELL = """<!DOCTYPE html>
 						</div>
 					</div>
 				</section>
+				<section class="contact-section" id="contact">
+					<div class="contact-layout">
+						<div class="contact-copy">
+							<h2 class="uk-h1">Контакти</h2>
+							<p class="contact-facts">
+								<strong>Адреса:</strong><br>
+								<a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%92%D1%96%D0%BD%D0%BD%D0%B8%D1%86%D1%8F%2C+%D0%B2%D1%83%D0%BB.+%D0%93%D0%BE%D0%B3%D0%BE%D0%BB%D1%8F%2C+15" target="_blank" rel="noopener noreferrer">Вінниця, вул. Гоголя 15</a><br>
+								<a href="tel:+380751777567">075 177 75 67</a>
+							</p>
+							<p class="contact-facts">
+								<strong>Графік роботи:</strong><br>
+								Пн-пт: 9.00–18.00<br>
+								Сб: 9.00–15.00<br>
+								Нд: вихідний
+							</p>
+							<p><a class="uk-button" href="https://www.google.com/maps/dir/?api=1&amp;destination=%D0%92%D1%96%D0%BD%D0%BD%D0%B8%D1%86%D1%8F%2C+%D0%B2%D1%83%D0%BB.+%D0%93%D0%BE%D0%B3%D0%BE%D0%BB%D1%8F%2C+15" target="_blank" rel="noopener noreferrer">Прокласти маршрут</a></p>
+						</div>
+						<div class="contact-map">
+							<iframe title="Novadent на карті — Вінниця, Гоголя 15" src="https://maps.google.com/maps?q=%D0%92%D1%96%D0%BD%D0%BD%D0%B8%D1%86%D1%8F%2C+%D0%93%D0%BE%D0%B3%D0%BE%D0%BB%D1%8F+15&amp;hl=uk&amp;z=16&amp;ie=UTF8&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+						</div>
+					</div>
+				</section>
 			</main>
 			<footer class="page-footer">
 				<div class="uk-container uk-container-xlarge">
@@ -79,7 +101,7 @@ SHELL = """<!DOCTYPE html>
 						<div class="page-footer__top">
 							<div class="page-footer__inner">
 								<div class="page-footer__logo">
-									<a class="brand-logo brand-logo--footer" href="{root}" aria-label="Novadent"><span class="brand-nova">NOVA</span><span class="brand-dent">DENT</span></a>
+									<a class="brand-logo brand-logo--footer" href="{root}index.html" aria-label="Novadent"><span class="brand-nova">NOVA</span><span class="brand-dent">DENT</span></a>
 								</div>
 								<div class="page-footer__contacts">
 									<a class="phone-footer" href="tel:+380751777567">
@@ -97,7 +119,7 @@ SHELL = """<!DOCTYPE html>
 									<ul class="adress-list">
 										<li class="adress-list__item">
 											<div class="adress-list__value">
-												<a href="{root}#contact"><span>Вінниця, вул. Гоголя 15</span></a>
+												<a href="#contact"><span>Вінниця, вул. Гоголя 15</span></a>
 												<span>Пн-пт: 9:00–18:00</span>
 												<span>Сб: 9:00–15:00</span>
 											</div>
@@ -107,20 +129,20 @@ SHELL = """<!DOCTYPE html>
 								<div class="page-footer__menu">
 									<div class="footer-title">Пацієнтам</div>
 									<ul class="footer-menu">
-										<li><a href="{root}#about">Про нас</a></li>
-										<li><a href="{root}#faq">Часті запитання</a></li>
+										<li><a href="{root}index.html#about">Про нас</a></li>
+										<li><a href="{root}index.html#faq">Часті запитання</a></li>
 										<li><a href="{root}blog/index.html">Блог</a></li>
-										<li><a href="{root}#prices">Ціни</a></li>
-										<li><a href="{root}#contact">Контакти</a></li>
+										<li><a href="{root}index.html#prices">Ціни</a></li>
+										<li><a href="#contact">Контакти</a></li>
 									</ul>
 								</div>
 								<div class="page-footer__menu">
 									<div class="footer-title">Послуги</div>
 									<ul class="footer-menu">
-										<li><a href="{root}#services">Консультація</a></li>
-										<li><a href="{root}#services">Терапія</a></li>
-										<li><a href="{root}#services">Протезування</a></li>
-										<li><a href="{root}#services">Візіограф (рентген)</a></li>
+										<li><a href="{root}index.html#services">Консультація</a></li>
+										<li><a href="{root}index.html#services">Терапія</a></li>
+										<li><a href="{root}index.html#services">Протезування</a></li>
+										<li><a href="{root}index.html#services">Візіограф (рентген)</a></li>
 									</ul>
 								</div>
 							</div>
@@ -139,19 +161,19 @@ SHELL = """<!DOCTYPE html>
 			<div id="offcanvas" uk-offcanvas="overlay: true; flip: true; mode: slide">
 				<div class="uk-offcanvas-bar">
 					<div class="uk-offcanvas-header">
-						<a class="brand-logo" href="{root}" uk-toggle="target: #offcanvas" aria-label="Novadent"><span class="brand-nova">NOVA</span><span class="brand-dent">DENT</span></a>
+						<a class="brand-logo" href="{root}index.html" uk-toggle="target: #offcanvas" aria-label="Novadent"><span class="brand-nova">NOVA</span><span class="brand-dent">DENT</span></a>
 						<button class="menu-close uk-offcanvas-close" type="button" aria-label="Закрити">
 							<svg width="34" height="34" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M5 5l12 12M17 5 5 17" stroke="#111" stroke-width="1.6" stroke-linecap="round"/></svg>
 						</button>
 					</div>
 					<div class="uk-offcanvas-body">
 						<ul class="uk-nav uk-nav-default">
-							<li><a href="{root}#about" uk-toggle="target: #offcanvas">Про нас</a></li>
-							<li><a href="{root}#services" uk-toggle="target: #offcanvas">Послуги</a></li>
-							<li><a href="{root}#faq" uk-toggle="target: #offcanvas">Часті запитання</a></li>
+							<li><a href="{root}index.html#about" uk-toggle="target: #offcanvas">Про нас</a></li>
+							<li><a href="{root}index.html#services" uk-toggle="target: #offcanvas">Послуги</a></li>
+							<li><a href="{root}index.html#faq" uk-toggle="target: #offcanvas">Часті запитання</a></li>
 							<li><a href="{root}blog/index.html" uk-toggle="target: #offcanvas">Блог</a></li>
-							<li><a href="{root}#prices" uk-toggle="target: #offcanvas">Ціни</a></li>
-							<li><a href="{root}#contact" uk-toggle="target: #offcanvas">Контакти</a></li>
+							<li><a href="{root}index.html#prices" uk-toggle="target: #offcanvas">Ціни</a></li>
+							<li><a href="{root}index.html#contact" uk-toggle="target: #offcanvas">Контакти</a></li>
 						</ul>
 					</div>
 					<div class="uk-offcanvas-foot">
