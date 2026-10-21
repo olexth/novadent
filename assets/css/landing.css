@@ -894,6 +894,7 @@ body {
   .philosophy__content,
   .care__content,
   .consultation__content,
+  .blog-panel,
   .page-footer__top,
   .page-footer__bottom {
     padding: 28px 18px;
@@ -993,7 +994,12 @@ body {
 }
 
 .blog-section {
-  padding: 48px 0 24px;
+  padding: 40px 0;
+}
+
+.blog-panel {
+  background: var(--panel);
+  padding: 48px 40px;
 }
 
 .blog-list {
