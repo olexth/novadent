@@ -12,7 +12,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Cinzel:wght@500&display=swap">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.6/dist/css/uikit.min.css" />
-		<link rel="stylesheet" href="../assets/css/landing.css?v=30">
+		<link rel="stylesheet" href="../assets/css/landing.css?v=32">
 	</head>
 	<body>
 		<div class="page-wrapper">
@@ -53,7 +53,7 @@
 				<section class="blog-section">
 					<div class="uk-container uk-container-xlarge">
 						<div class="blog-panel">
-							<h1 class="uk-h1">Блог</h1><p>Поки що немає записів.</p>
+							<h1 class="uk-h1">Блог</h1><ul class="blog-list"><li data-publish="2026-06-01" hidden><a href="articles/2026-06-01-consult.html"><img class="blog-preview__image" src="../images/care-consult.jpg" alt=""><span class="blog-preview__text"><time>01.06.2026</time><span class="blog-preview__title">Первинна консультація</span></span><span class="blog-read">Читати статтю<svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="none" stroke="currentColor" stroke-width="1"/><path d="M7 11h8M12 7.5 15.5 11 12 14.5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li data-publish="2026-07-01" hidden><a href="articles/2026-07-01-therapy.html"><img class="blog-preview__image" src="../images/service-therapy.jpg" alt=""><span class="blog-preview__text"><time>01.07.2026</time><span class="blog-preview__title">Лікування карієсу і пульпіту</span></span><span class="blog-read">Читати статтю<svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="none" stroke="currentColor" stroke-width="1"/><path d="M7 11h8M12 7.5 15.5 11 12 14.5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li data-publish="2026-08-01" hidden><a href="articles/2026-08-01-crowns.html"><img class="blog-preview__image" src="../images/service-prosthetics.jpg" alt=""><span class="blog-preview__text"><time>01.08.2026</time><span class="blog-preview__title">Коронка на зуб</span></span><span class="blog-read">Читати статтю<svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="none" stroke="currentColor" stroke-width="1"/><path d="M7 11h8M12 7.5 15.5 11 12 14.5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li data-publish="2026-09-01" hidden><a href="articles/2026-09-01-denture.html"><img class="blog-preview__image" src="../images/about-doctor.jpg" alt=""><span class="blog-preview__text"><time>01.09.2026</time><span class="blog-preview__title">Знімний і бюгельний протез</span></span><span class="blog-read">Читати статтю<svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="none" stroke="currentColor" stroke-width="1"/><path d="M7 11h8M12 7.5 15.5 11 12 14.5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li data-publish="2026-10-01" hidden><a href="articles/2026-10-01-scan.html"><img class="blog-preview__image" src="../images/dental-scan.jpg" alt=""><span class="blog-preview__text"><time>01.10.2026</time><span class="blog-preview__title">Знімок на візіографі</span></span><span class="blog-read">Читати статтю<svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="none" stroke="currentColor" stroke-width="1"/><path d="M7 11h8M12 7.5 15.5 11 12 14.5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li></ul><p class="blog-empty" hidden>Поки що немає записів.</p>
 						</div>
 					</div>
 				</section>
@@ -180,6 +180,28 @@
 				<span>075 177 75 67</span>
 			</a>
 		</div>
+		<script>
+			(function () {
+				var now = new Date();
+				var today = now.getFullYear() + "-"
+					+ String(now.getMonth() + 1).padStart(2, "0") + "-"
+					+ String(now.getDate()).padStart(2, "0");
+				var visiblePosts = 0;
+				document.querySelectorAll("[data-publish]").forEach(function (node) {
+					var day = node.getAttribute("data-publish");
+					var due = !day || day <= today;
+					node.hidden = !due;
+					if (due && (node.tagName === "LI" || node.classList.contains("blog-entry"))) visiblePosts += 1;
+				});
+				document.querySelectorAll(".blog-pending").forEach(function (node) {
+					var entry = node.previousElementSibling;
+					node.hidden = !(entry && entry.hidden);
+				});
+				document.querySelectorAll(".blog-empty").forEach(function (node) {
+					node.hidden = visiblePosts > 0;
+				});
+			})();
+		</script>
 		<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.6/dist/js/uikit.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.6/dist/js/uikit-icons.min.js"></script>
 	</body>
