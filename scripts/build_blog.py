@@ -28,7 +28,7 @@ SHELL = """<!DOCTYPE html>
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Cinzel:wght@500&display=swap">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.6/dist/css/uikit.min.css" />
-		<link rel="stylesheet" href="{root}assets/css/landing.css?v=32">
+		<link rel="stylesheet" href="{root}assets/css/landing.css?v=33">
 	</head>
 	<body>
 		<div class="page-wrapper">
@@ -286,7 +286,7 @@ def main():
     if POSTS.exists():
         for path in sorted(POSTS.glob("*.md")):
             posts.append(parse_post(path))
-    posts.sort(key=lambda item: item["date"] or datetime.min)
+    posts.sort(key=lambda item: item["date"] or datetime.min, reverse=True)
 
     ARTICLES.mkdir(parents=True, exist_ok=True)
     keep = {f"{item['slug']}.html" for item in posts}
@@ -297,7 +297,7 @@ def main():
     items = []
     index_root = "../"
     article_root = "../../"
-    for item in posts[:5]:
+    for item in posts:
         preview = ""
         if item["image"]:
             src = asset(item["image"] if item["image"].startswith("/") else f"/{item['image']}", index_root)
