@@ -61,6 +61,6 @@ Wilson і співавтори залишають профілактику дл�
 ## Джерела
 
 <ol class="blog-sources">
-<li>Wilson WR, Gewitz M, Lockhart PB, et al. Prevention of viridans group streptococcal infective endocarditis: a scientific statement from the American Heart Association. Circulation. 2021. Профілактика обмежена найвищим серцевим ризиком і процедурами, які чіпають ясна, перипікальну ділянку або проходять крізь слизову.</li>
+<li><a href="https://doi.org/10.1161/CIR.0000000000000969" target="_blank" rel="noopener noreferrer">Wilson WR, Gewitz M, Lockhart PB, et al. Prevention of viridans group streptococcal infective endocarditis: a scientific statement from the American Heart Association. Circulation. 2021.</a> Профілактика обмежена найвищим серцевим ризиком і процедурами, які чіпають ясна, перипікальну ділянку або проходять крізь слизову.</li>
 <li><a href="https://www.who.int/news-room/fact-sheets/detail/oral-health" target="_blank" rel="noopener noreferrer">World Health Organization. Oral health. Fact sheet, 17 March 2025.</a> Хвороби порожнини рота ділять чинники ризику з іншими неінфекційними хворобами, зокрема серцево-судинними; серед чинників названо погану гігієну, цукор, тютюн і алкоголь. Довідка не встановлює показань до антибіотика перед стоматологічним візитом.</li>
 </ol>
