@@ -21,8 +21,8 @@ image: /images/blog/acrylic-partial.jpg
 Дорослий із активними пухирцями на губі не цілує немовля і не ділить із дитиною ложку. Коли свіжих пухирців немає, плановий огляд знову доречний.
 
 <figure>
-<img src="/images/care-consult.jpg" alt="Розмова за столом над документом">
-<figcaption>Активний герпес на губі — привід перенести планову роботу, а не фото для діагнозу. На цьому знімку немає пухирців. Фото ілюстративне.</figcaption>
+<img src="/images/blog/candidiasis.jpg" alt="Білі нальоти молочниці на піднебінні">
+<figcaption>Білі нальоти на піднебінні, які можна зняти. Навчальне фото кандидозу, не пацієнт Novadent. Фото: Sol Silverman, CDC, <a href="https://commons.wikimedia.org/wiki/File:CandidiasisFromCDCinJPEG03-18-06.JPG" target="_blank" rel="noopener noreferrer">суспільне надбання</a>.</figcaption>
 </figure>
 
 ## Молочниця

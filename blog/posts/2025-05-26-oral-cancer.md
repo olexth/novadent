@@ -1,7 +1,7 @@
 ---
 title: Коли виразка в роті не минає
 date: 2025-05-26
-image: /images/about-doctor.jpg
+image: /images/blog/mirror.jpg
 ---
 
 Більшість виразок у роті закриваються самі. Мала афта і прикус щоки якраз такі: болять кілька днів і минають. Інша історія починається там, де ділянка лишається, змінює колір або під нею з’являється ущільнення. Цей текст про те, коли огляд уже не варто відкладати, і про те, що саме робить із такою знахідкою кабінет Novadent.
@@ -34,9 +34,9 @@ image: /images/about-doctor.jpg
 
 <figure>
 
-<img src="/images/blog/exam-instruments.jpg" alt="Стоматологічний зонд і пародонтальний зонд">
+<img src="/images/blog/leukoplakia.jpg" alt="Біла пляма на слизовій щоки">
 
-<figcaption>Огляд слизової йде разом із оглядом зубів: зонд допомагає не пропустити край, який сам поранив щоку. Навчальне фото. Автор: Coronation Dental Specialty Group, <a href="https://commons.wikimedia.org/wiki/File:Dental_explorer_and_periodontal_probe.jpg" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>.</figcaption>
+<figcaption>Біла пляма на щоці, яка не знімається. Це навчальний приклад лейкоплакії, не діагноз і не пацієнт Novadent. Фото: dozenist, <a href="https://commons.wikimedia.org/wiki/File:Leukoplakia02-04-06.jpg" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>.</figcaption>
 
 </figure>
 

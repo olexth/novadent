@@ -40,9 +40,9 @@ image: /images/blog/ceramic-crowns.jpg
 
 <figure>
 
-<img src="/images/blog/manual-brush.jpg" alt="Ручна зубна щітка">
+<img src="/images/blog/coffee.jpg" alt="Чашка кави зверху">
 
-<figcaption>Щітка знімає наліт. Колір зуба вона не переписує, а жорстка паста може лише стерти емаль. Фото: Dwight Burdette, <a href="https://commons.wikimedia.org/wiki/File:A_Toothbrush.JPG" target="_blank" rel="noopener noreferrer">CC BY 3.0</a>.</figcaption>
+<figcaption>Кава фарбує наліт і поверхневий шар емалі. Щітка знімає наліт, а колір самої емалі змінює вже перекис, не напій. Фото: Egien, <a href="https://commons.wikimedia.org/wiki/File:Coffee_cup.jpg" target="_blank" rel="noopener noreferrer">CC BY 2.5</a>.</figcaption>
 
 </figure>
 
