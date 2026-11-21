@@ -5,6 +5,7 @@ import html
 import re
 from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import markdown
 
@@ -27,7 +28,7 @@ SHELL = """<!DOCTYPE html>
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Cinzel:wght@500&display=swap">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.6/dist/css/uikit.min.css" />
-		<link rel="stylesheet" href="{root}assets/css/landing.css?v=30">
+		<link rel="stylesheet" href="{root}assets/css/landing.css?v=33">
 	</head>
 	<body>
 		<div class="page-wrapper">
@@ -195,6 +196,28 @@ SHELL = """<!DOCTYPE html>
 				<span>075 177 75 67</span>
 			</a>
 		</div>
+		<script>
+			(function () {{
+				var now = new Date();
+				var today = now.getFullYear() + "-"
+					+ String(now.getMonth() + 1).padStart(2, "0") + "-"
+					+ String(now.getDate()).padStart(2, "0");
+				var visiblePosts = 0;
+				document.querySelectorAll("[data-publish]").forEach(function (node) {{
+					var day = node.getAttribute("data-publish");
+					var due = !day || day <= today;
+					node.hidden = !due;
+					if (due && (node.tagName === "LI" || node.classList.contains("blog-entry"))) visiblePosts += 1;
+				}});
+				document.querySelectorAll(".blog-pending").forEach(function (node) {{
+					var entry = node.previousElementSibling;
+					node.hidden = !(entry && entry.hidden);
+				}});
+				document.querySelectorAll(".blog-empty").forEach(function (node) {{
+					node.hidden = visiblePosts > 0;
+				}});
+			}})();
+		</script>
 		<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.6/dist/js/uikit.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.6/dist/js/uikit-icons.min.js"></script>
 	</body>
@@ -224,10 +247,18 @@ def parse_post(path):
         except ValueError:
             parsed = None
     image = meta.get("image", "")
+    publish_day = ""
+    if parsed:
+        if "T" in raw_date:
+            moment = parsed if parsed.tzinfo else parsed.replace(tzinfo=ZoneInfo("Europe/Kyiv"))
+            publish_day = moment.astimezone(ZoneInfo("Europe/Kyiv")).strftime("%Y-%m-%d")
+        else:
+            publish_day = parsed.strftime("%Y-%m-%d")
     return {
         "slug": path.stem,
         "title": title,
         "date": parsed,
+        "publish_day": publish_day,
         "date_label": parsed.strftime("%d.%m.%Y") if parsed else "",
         "image": image,
         "html": markdown.markdown(body, extensions=["extra", "sane_lists"]),
@@ -264,7 +295,23 @@ def main():
             old.unlink()
 
     items = []
+    index_root = "../"
     article_root = "../../"
+    for item in posts:
+        preview = ""
+        if item["image"]:
+            src = asset(item["image"] if item["image"].startswith("/") else f"/{item['image']}", index_root)
+            preview = f'<img class="blog-preview__image" src="{html.escape(src)}" alt="">'
+        when = f"<time>{html.escape(item['date_label'])}</time>" if item["date_label"] else ""
+        publish = html.escape(item["publish_day"])
+        items.append(
+            f'<li data-publish="{publish}" hidden><a href="articles/{html.escape(item["slug"])}.html">{preview}'
+            f'<span class="blog-preview__text">{when}<span class="blog-preview__title">{html.escape(item["title"])}</span></span>'
+            f'<span class="blog-read">Читати статтю'
+            f'<svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="none" stroke="currentColor" stroke-width="1"/><path d="M7 11h8M12 7.5 15.5 11 12 14.5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+            f'</span></a></li>'
+        )
+
     for item in posts:
         image = ""
         if item["image"]:
@@ -272,16 +319,16 @@ def main():
             image = f'<img class="blog-cover" src="{html.escape(src)}" alt="">'
         when = f"<time>{html.escape(item['date_label'])}</time>" if item["date_label"] else ""
         body = item["html"].replace('src="/', f'src="{article_root}')
-        items.append(
-            f'<li><a href="articles/{html.escape(item["slug"])}.html">{when}'
-            f'<span>{html.escape(item["title"])}</span></a></li>'
-        )
+        publish = html.escape(item["publish_day"])
         article = (
+            f'<div class="blog-entry" data-publish="{publish}" hidden>'
             f'<p><a href="../index.html">Блог</a></p>'
             f'<h1 class="uk-h1">{html.escape(item["title"])}</h1>'
             f'{when}'
             f'{image}'
             f'<div class="blog-article">{body}</div>'
+            f'</div>'
+            f'<p class="blog-pending" hidden>Цей запис з’явиться на сайті пізніше.</p>'
         )
         target = ARTICLES / f"{item['slug']}.html"
         target.write_text(
@@ -290,7 +337,10 @@ def main():
         )
 
     if items:
-        listing = '<h1 class="uk-h1">Блог</h1><ul class="blog-list">' + "".join(items) + "</ul>"
+        listing = (
+            '<h1 class="uk-h1">Блог</h1><ul class="blog-list">' + "".join(items) + "</ul>"
+            '<p class="blog-empty" hidden>Поки що немає записів.</p>'
+        )
     else:
         listing = '<h1 class="uk-h1">Блог</h1><p>Поки що немає записів.</p>'
     INDEX.write_text(page("Блог — Novadent", "Блог стоматології Novadent у Вінниці.", listing, "../"), encoding="utf-8")

@@ -26,6 +26,9 @@ collections:
     preview_path: /blog/articles/{{slug}}.html
     fields:
       - { label: Заголовок, name: title, widget: string }
-      - { label: Дата, name: date, widget: datetime }
+      - label: Дата публікації
+        name: date
+        widget: datetime
+        hint: Запис з’явиться на сайті в цей день. Майбутню дату можна виставити заздалегідь, заходити й публікувати повторно не потрібно.
       - { label: Зображення, name: image, widget: image, required: false }
       - { label: Текст, name: body, widget: richtext }
